@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>GCD Of Two Numbers</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var n1 = Number(prompt('Enter a number'));
+
+       var n2 = Number(prompt('Enter a number'));
+       
+       alert('GCD of '+n1+' and '+n2+' is - '+gcd(n1,n2));
+
+       function gcd(a, b)
+		{
+		    // Everything divides 0 
+		    if (a == 0)
+		       return b;
+		    if (b == 0)
+		       return a;
+		  
+		    // base case
+		    if (a == b)
+		        return a;
+		  
+		    // a is greater
+		    if (a > b)
+		        return gcd(a-b, b);
+		    return gcd(a, b-a);
+		}
+	</script>
+</body>
+</html>
