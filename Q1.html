@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Random Color Generation</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #ABCDEF;
+            border-color: black;
+            border-radius: 200px;
+            border-style: dashed;
+            margin: 250px;
+            margin-left: 500px;
+        }
+        div:hover{
+            box-shadow:0px 10px 50px rgba(37, 50, 233, 1);
+        }
+        div button{
+        	margin-top: 250px;
+        	margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle">
+    	<button id='btn'>Change Colour</button>
+    </div>
+    <script type="text/javascript">
+        function randomColorGeneration() {
+            colors = '123456789ABCDEF';
+            color = '#';
+            for(var i=0;i<6;i++){
+                random = Math.ceil(Math.random()*14);
+                color = color + colors[random];
+            }
+            return color;
+        }
+
+        button = document.getElementById('btn');
+        btn.onclick = function(){
+            color = randomColorGeneration();
+            circle = document.getElementById('circle');
+            circle.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
