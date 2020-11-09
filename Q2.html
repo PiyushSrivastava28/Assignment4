@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Swap contents of two para</title>
+    <style type="text/css">
+    	div{
+    		margin-top: 150px;
+    	}
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        button{
+        	text-align: center;
+        	margin-left: 585px;
+        	font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+	<div>
+	    <p id="para1">JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.</p>
+	    <p id="para2">Python is an interpreted, high-level,, and general-purpose programming language.</p>
+	    <button id='btn'>Swap Content</button>
+	</div>
+    <script type="text/javascript">
+
+        document.getElementById('btn').onclick = function() {
+             p1 = document.getElementById('para1');
+        p1Content = p1.innerText;
+
+        p2 = document.getElementById('para2');
+        p2Content = p2.innerText;
+        
+        p1.innerText = p2Content;
+        p2.innerText = p1Content;
+        //console.log('para1 - '+ p1Content);
+        //console.log('para2 - '+ p2Content);
+        }
+       
+    </script>
+</body>
+</html>
